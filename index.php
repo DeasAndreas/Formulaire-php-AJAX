@@ -1,75 +1,47 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-
-	<title>Php Ajax Form Validation</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-</head>
-
-<body>
-
-
-<div class="container">
-
-  <h1>Php Ajax Formulaire Validation</h1>
-
-  <form role="form" id="contactForm" class="contact-form" data-toggle="validator" class="shake">
-
-    <div class="alert alert-danger display-error" style="display: none">
-
+ <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <script src="script.js"></script>
+ </head>
+ <body>
+    <div id="mainform">
+        <div class="innerdiv">
+        <h2>Form Validation Using AJAX</h2>
+        <form action='#' id="myForm" method='post' name="myForm">
+        <h3>Fill Your Information!</h3>
+    <table>
+        <tr>
+            <td>Nom</td>
+            <td><input id='username1' name='username' onblur="validate('username', this.value)" type='text'></td>
+            <td>
+                <div id='username'></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Mot de passe</td>
+            <td><input id='password1' name='password' onblur="validate('password', this.value)" type='password'></td>
+            <td>
+                <div id='password'></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input id='email1' name='email' onblur="validate('email', this.value)" type='text'></td>
+            <td>
+                <div id='email'></div>
+            </td>
+        </tr>
+        <tr>
+            <td>websit</td>
+            <td><input id='website1' name='website' onblur="validate('website', this.value)" type='text'></td>
+            <td>
+                <div id='website'></div>
+            </td>
+        </tr>
+    </table>
+    <input onclick="checkForm()" type='button' value='Submit'>
+    </form>
     </div>
-
-    <div class="form-group">
-
-      <div class="controls">
-
-        <input type="text" id="name" class="form-control" placeholder="Nom">
-
-      </div>
-
-    </div>
-
-    <div class="form-group">
-
-      <div class="controls">
-
-        <input type="email" class="email form-control" id="email" placeholder="Email" >
-
-      </div>
-
-    </div>
-
-    <div class="form-group">
-
-      <div class="controls">
-
-        <input type="text" id="msg_subject" class="form-control" placeholder="Sujet" >
-
-      </div>
-
-    </div>
-
-    <div class="form-group">
-
-      <div class="controls">
-
-        <textarea id="message" rows="7" placeholder="Message" class="form-control"></textarea>
-
-      </div>
-
-    </div>
-
-    <button type="submit" id="submit" class="btn btn-success"><i class="fa fa-check"></i>Envoyer</button>
-
-  </form>
-
-</div>
-
-
 </body>
-
 </html>
