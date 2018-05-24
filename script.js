@@ -1,3 +1,5 @@
+
+
 function checkForm() {
 // Fetching values from all input fields and storing them in variables.
     var name = document.getElementById("username1").value;
@@ -38,8 +40,8 @@ function validate(field, query) {
         } else {
             document.getElementById(field).innerHTML = "Error Occurred. <a href='index.php'>Reload Or Try Again</a> the page.";
         }
-    };
-    xmlhttp.open("GET", "validation.php?field=" + field + "&query=" + query, false);
+    }
+    xmlhttp.open("POST", "validation.php?field=" + field + "&query=" + query, false);
     xmlhttp.send();
 }
 
